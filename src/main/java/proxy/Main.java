@@ -1,5 +1,6 @@
 package proxy;
 
+
 /**
  * Date: 2016年2月19日 下午1:00:49 <br/>
  * 
@@ -18,7 +19,9 @@ public class Main {
 
 			@Override
 			public void sayHello() {
-				this.sayHi();
+				// this.sayHi();
+				SayHello proxy = (SayHello) ProxyContext.getProxy();
+				proxy.sayHi();
 				System.out.println("hello");
 			}
 		});

@@ -26,9 +26,11 @@ public class ProxyFactory {
 
 		@Override
 		public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+			ProxyContext.put(proxy);
 			System.out.println("invoking method:" + method.getName());
 			Object result = method.invoke(realObj, args);
 			System.out.println("invoking finished...");
+			ProxyContext.remove();
 			return result;
 		}
 
