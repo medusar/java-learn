@@ -14,7 +14,7 @@ import org.junit.Test;
 /**
  * Date: 2015年12月23日 上午10:16:07 <br/>
  * 
- * @author wanglianbin
+ * @author medusar
  */
 public class LocalTest {
 
