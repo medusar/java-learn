@@ -5,8 +5,16 @@ package loader;
  * @author   medusar       
  */
 public class Main {
-	public static void main(String[] args) {
-		System.out.println(ClassLoader.getSystemClassLoader());
+	public static void main(String[] args) throws ClassNotFoundException {
+//		System.out.println(ClassLoader.getSystemClassLoader());
+		
+		Class<?> forName = Class.forName("loader.Foo");
+		
+//		System.out.println(Foo.data);
+		
+//		Class.forName("loader.FooInterface");
+		
+//		new Foo();
 	}
 }
   
