@@ -1,11 +1,16 @@
 package xml;
 
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
 /**
  * Date: 2016年2月23日 下午7:01:04 <br/>
  * 
  * @author medusar
  */
+@XmlRootElement
 public class Entity {
+
 	private String strData;
 	private int intData;
 
