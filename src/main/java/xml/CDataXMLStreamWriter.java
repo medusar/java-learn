@@ -6,7 +6,7 @@ import javax.xml.stream.XMLStreamWriter;
 /**
  * Date: 2016年2月26日 上午11:14:28 <br/>
  * 
- * @author wanglianbin
+ * @author medusar
  */
 public class CDataXMLStreamWriter extends DelegatingXMLStreamWriter {
 	private static final String CDATA_END = "]]>";

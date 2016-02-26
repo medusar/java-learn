@@ -7,7 +7,7 @@ import javax.xml.stream.XMLStreamWriter;
 /**
  * Date: 2016年2月26日 上午11:15:51 <br/>
  * 
- * @author wanglianbin
+ * @author medusar
  */
 public class DelegatingXMLStreamWriter implements XMLStreamWriter {
 	private final XMLStreamWriter writer;
