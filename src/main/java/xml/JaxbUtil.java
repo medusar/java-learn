@@ -19,7 +19,7 @@ import javax.xml.stream.XMLStreamWriter;
 /**
  * Date: 2016年2月26日 上午10:57:44 <br/>
  * 
- * @author wanglianbin
+ * @author medusar
  */
 public class JaxbUtil {
 	private static final String CDATA_END = "]]>";
