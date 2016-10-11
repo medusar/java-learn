@@ -1,5 +1,7 @@
 package nettylearn;
 
+import org.apache.log4j.Logger;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
@@ -7,9 +9,6 @@ import java.util.Enumeration;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
-
-import org.apache.log4j.Logger;
-import org.junit.Test;
 
 /**
  * Date: 2015年12月23日 上午10:16:07 <br/>
@@ -22,7 +21,6 @@ public class LocalTest {
 
 	private static Logger logger = Logger.getLogger(LocalTest.class);
 
-	@Test
 	public void testLog() throws IOException {
 		logger.info("ssssssssssssssssssssssssss");
 		 Enumeration<URL> resources = LocalTest.class.getClassLoader().getResources("org/apache/log4j/Logger.class");
@@ -32,7 +30,6 @@ public class LocalTest {
 		}
 	}
 
-	@Test
 	public void test() {
 		ReentrantLock lock = new ReentrantLock();
 		Condition condition = lock.newCondition();
@@ -54,7 +51,6 @@ public class LocalTest {
 		}
 	}
 
-	@Test
 	public void testWait() {
 		ReentrantLock lock = new ReentrantLock();
 		Condition condition = lock.newCondition();
@@ -77,7 +73,6 @@ public class LocalTest {
 		}
 	}
 
-	@Test
 	public void testClassLoader() {
 
 		ClassLoader objectLoader = Object.class.getClassLoader();

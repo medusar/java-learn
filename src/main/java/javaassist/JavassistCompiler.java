@@ -1,16 +1,9 @@
 package javaassist;
 
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
-import java.util.regex.Pattern;
-
+import com.medusar.compile.string.Function;
 import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtNewMethod;
-
-import org.junit.Test;
-
-import com.medusar.compile.string.Function;
 
 /**
  * Date: 2016年2月6日 上午10:48:19 <br/>
@@ -42,7 +35,6 @@ public class JavassistCompiler {
 		return null;
 	}
 
-	@Test
 	public void testCompile() throws Exception {
 		String functionImplSourceCode = "package org.medusar;\n"
 				+"import com.medusar.compile.string.Function;\n"
