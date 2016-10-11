@@ -6,41 +6,37 @@ import java.util.Enumeration;
 import java.util.Iterator;
 import java.util.ServiceLoader;
 
-import org.junit.Test;
-
 public class ClassLoaderTest {
 
-	@Test
-	public void testClassLoader() {
-		ServiceLoader<Driver> loader = ServiceLoader.load(Driver.class, ClassLoader.getSystemClassLoader().getParent());
-		Iterator<Driver> iterator = loader.iterator();
-		while (iterator.hasNext()) {
-			Driver driver = (Driver) iterator.next();
-			System.out.println("driver:" + driver.getClass() + ",loader:" + driver.getClass().getClassLoader());
-		}
-		System.out.println("system loader:" + ClassLoader.getSystemClassLoader());
-		System.out.println("system loader's parent:" + ClassLoader.getSystemClassLoader().getParent());
-	}
 
-	@Test
-	public void testClassLoader1() {
-		Thread.currentThread().setContextClassLoader(ClassLoader.getSystemClassLoader().getParent());
-		ServiceLoader<Driver> loader1 = ServiceLoader.load(Driver.class);
-		Iterator<Driver> iterator2 = loader1.iterator();
-		while (iterator2.hasNext()) {
-			Driver driver = (Driver) iterator2.next();
-			System.out.println("driver:" + driver.getClass() + ",loader:" + driver.getClass().getClassLoader());
-		}
-		System.out.println("current classLoader:" + Thread.currentThread().getContextClassLoader());
-	}
+    public void testClassLoader() {
+        ServiceLoader<Driver> loader = ServiceLoader.load(Driver.class, ClassLoader.getSystemClassLoader().getParent());
+        Iterator<Driver> iterator = loader.iterator();
+        while (iterator.hasNext()) {
+            Driver driver = (Driver) iterator.next();
+            System.out.println("driver:" + driver.getClass() + ",loader:" + driver.getClass().getClassLoader());
+        }
+        System.out.println("system loader:" + ClassLoader.getSystemClassLoader());
+        System.out.println("system loader's parent:" + ClassLoader.getSystemClassLoader().getParent());
+    }
 
-	@Test
-	public void testDrivemanage() {
-		Enumeration<Driver> enumration = DriverManager.getDrivers();
-		while (enumration.hasMoreElements()) {
-			Driver driver = (Driver) enumration.nextElement();
-			System.out.println(driver.getClass().getClassLoader());
-		}
-	}
+    public void testClassLoader1() {
+        Thread.currentThread().setContextClassLoader(ClassLoader.getSystemClassLoader().getParent());
+        ServiceLoader<Driver> loader1 = ServiceLoader.load(Driver.class);
+        Iterator<Driver> iterator2 = loader1.iterator();
+        while (iterator2.hasNext()) {
+            Driver driver = (Driver) iterator2.next();
+            System.out.println("driver:" + driver.getClass() + ",loader:" + driver.getClass().getClassLoader());
+        }
+        System.out.println("current classLoader:" + Thread.currentThread().getContextClassLoader());
+    }
+
+    public void testDrivemanage() {
+        Enumeration<Driver> enumration = DriverManager.getDrivers();
+        while (enumration.hasMoreElements()) {
+            Driver driver = (Driver) enumration.nextElement();
+            System.out.println(driver.getClass().getClassLoader());
+        }
+    }
 
 }
