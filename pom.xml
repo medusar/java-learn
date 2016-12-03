@@ -3,7 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>jason</groupId>
 	<artifactId>nettylearn</artifactId>
+	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
+	<modules>
+		<module>../jetty</module>
+	</modules>
 	<dependencies>
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
