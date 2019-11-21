@@ -1,7 +1,7 @@
 package str;
 
 /**
- * Created by lianbin.wang on 03/12/2016.
+ * Created by medusar on 03/12/2016.
  */
 public class StringTest {
 
